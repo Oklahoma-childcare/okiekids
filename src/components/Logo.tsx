@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { site } from '../config/site';
 
-export function Logo({ inverted = false }: {inverted?: boolean}) {
-  const [broken, setBroken] = useState(false);
+/** The supplied official logo is used intact in both navigation and footer. */
+export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
-    <a className={`site-brand ${inverted ? 'site-brand-inverted' : ''}`} href="/" aria-label={`${site.name} homepage`}>
-      <span className="brand-emblem" aria-hidden="true">
-        {!broken ? <img src={site.logoUrl} alt="" width="58" height="58" onError={() => setBroken(true)} /> : <strong>OK!</strong>}
-      </span>
-      <span className="brand-name"><strong>okie kids<span className="brand-spark">✳</span></strong><small>LEARNING ACADEMY</small></span>
+    <a className={`site-brand site-brand-official ${inverted ? 'site-brand-inverted' : ''}`} href="/" aria-label={`${site.name} homepage`}>
+      <img className="official-logo-image" src={site.logoUrl} alt={site.name} width="625" height="707" loading="eager" decoding="async" />
     </a>
   );
 }

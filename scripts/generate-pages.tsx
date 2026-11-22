@@ -38,7 +38,7 @@ function documentFor(route: Route) {
 <html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2448b6" />
+  <meta name="theme-color" content="#1c5660" />
   <meta name="robots" content="${indexable ? 'index,follow,max-image-preview:large' : 'noindex,nofollow'}" />
   <title>${text(meta.title)}</title>
   <meta name="description" content="${text(meta.description)}" />
